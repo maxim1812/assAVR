@@ -1,0 +1,75 @@
+.include "8515def.inc"  ; библиотека
+
+.def high = r16;  
+.def low = r17;  
+.def diods = r18;
+
+ldi high, 255; 
+ldi low, 0; 
+ 
+out DDRB,high; вход
+out DDRA,low; выход
+
+out PORTA,high; убрать дребезг
+
+
+metka_1:
+
+ldi diods, 0b00000000;
+out PORTB, diods;
+
+ldi diods, 0b00000001;
+out PORTB, diods;
+
+ldi diods, 0b00000011;
+out PORTB, diods;
+
+ldi diods, 0b00000111;
+out PORTB, diods;
+
+ldi diods, 0b00001111;
+out PORTB, diods;
+
+ldi diods, 0b00011111;
+out PORTB, diods;
+
+ldi diods, 0b00111111;
+out PORTB, diods;
+
+ldi diods, 0b01111111;
+out PORTB, diods;
+
+ldi diods, 0b11111111;
+out PORTB, diods;
+
+ldi diods, 0b01111111;
+out PORTB, diods;
+
+ldi diods, 0b00111111;
+out PORTB, diods;
+
+ldi diods, 0b00011111;
+out PORTB, diods;
+
+ldi diods, 0b00001111;
+out PORTB, diods;
+
+ldi diods, 0b00000111;
+out PORTB, diods;
+
+ldi diods, 0b00000011;
+out PORTB, diods;
+
+ldi diods, 0b00000001;
+out PORTB, diods;
+
+rjmp metka_1;
+
+ 
+
+
+
+
+
+
+
